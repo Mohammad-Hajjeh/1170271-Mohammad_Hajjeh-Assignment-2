@@ -21,6 +21,7 @@
     <Button
         android:id="@+id/btnCreat"
         style="@style/btn"
+        android:onClick="creatCv"
         android:text="Creat"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,6 +34,7 @@
     <Button
         android:id="@+id/btnExit"
         style="@style/btn"
+        android:onClick="exitCv"
         android:text="Exit"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
