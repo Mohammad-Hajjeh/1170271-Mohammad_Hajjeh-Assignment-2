@@ -4,23 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_dark"
+    android:background="@drawable/white"
     tools:context=".FirstActivity">
+
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="385dp"
         android:layout_height="202dp"
-        android:src="@drawable/cv"
+        android:src="@drawable/cv5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.128" />
 
     <Button
         android:id="@+id/btnCreat"
         style="@style/btn"
+        android:background="@drawable/custom"
         android:onClick="creatCv"
         android:text="Creat"
         android:textColor="#FFFFFF"
@@ -29,11 +31,12 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.434" />
+        app:layout_constraintVertical_bias="0.72" />
 
     <Button
         android:id="@+id/btnExit"
         style="@style/btn"
+        android:background="@drawable/custom"
         android:onClick="exitCv"
         android:text="Exit"
         android:textColor="#FFFFFF"
@@ -42,6 +45,6 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCreat"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintVertical_bias="0.139" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

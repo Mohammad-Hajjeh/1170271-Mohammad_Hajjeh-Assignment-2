@@ -1,7 +1,6 @@
 package edu.bzu.a1170271_mohammadhajjeh_assignment2;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class SecondActivity extends AppCompatActivity {
