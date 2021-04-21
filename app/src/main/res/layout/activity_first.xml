@@ -12,13 +12,14 @@
         android:id="@+id/imageView2"
         android:layout_width="350dp"
         android:layout_height="202dp"
-        android:src="@drawable/cv5"
         android:background="@drawable/custom"
+        android:src="@drawable/cv5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128" />
+        app:layout_constraintVertical_bias="0.086" />
 
     <Button
         android:id="@+id/btnCreat"
