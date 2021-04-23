@@ -10,12 +10,24 @@
 
   <ImageView
       android:id="@+id/imageView"
-      android:layout_width="312dp"
-      android:layout_height="95dp"
-      android:layout_marginStart="55dp"
+      android:layout_width="match_parent"
+      android:layout_height="82dp"
+      app:srcCompat="@drawable/registrationlogo" />
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="5dp"
       android:layout_marginTop="15dp"
-      android:src="@drawable/registrationlogo"
-      android:contentDescription="@string/todo" />
+      android:layout_marginRight="5dp"
+      android:background="@drawable/custom"
+      android:clickable="false"
+
+      android:text="Information"
+      android:textColor="@color/teal_700"
+      android:textSize="18sp"
+      android:textStyle="bold" />
 
   <EditText
       android:id="@+id/firstNameInput"
@@ -55,7 +67,7 @@
       android:layout_marginLeft="5dp"
       android:text="@string/gender"
       android:textColor="@color/black"
-      android:layout_marginTop="15dp"
+      android:layout_marginTop="5dp"
       android:textStyle="bold">
 
     <TextView
@@ -110,7 +122,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="horizontal"
-      android:layout_marginTop="15dp"
+      android:layout_marginTop="5dp"
       >
 
     <TextView
@@ -156,7 +168,7 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="15dp"
+      android:layout_marginTop="5dp"
       android:orientation="horizontal">
 
     <TextView
@@ -188,22 +200,36 @@
       android:textColor="@color/black"
       android:textStyle="bold" />
 
+  <Button
+      android:id="@+id/button2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="5dp"
+      android:layout_marginTop="15dp"
+      android:layout_marginRight="5dp"
+      android:background="@drawable/custom"
+      android:clickable="false"
+      android:text="Chose your option"
+      android:textColor="@color/teal_700"
+      android:textSize="18sp"
+      android:textStyle="bold" />
+
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="45dp"
-      android:layout_marginTop="100dp"
+      android:layout_marginTop="25dp"
       android:orientation="horizontal">
 
     <Button
         android:id="@+id/ExitButton"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="45dp"
         android:background="@drawable/custom"
         android:onClick="exit_onClick"
         android:text="Exit"
         android:textColor="@color/teal_700"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
@@ -215,7 +241,7 @@
         android:onClick="continue_onClick"
         android:text="Continue"
         android:textColor="@color/teal_700"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
   </LinearLayout>
 

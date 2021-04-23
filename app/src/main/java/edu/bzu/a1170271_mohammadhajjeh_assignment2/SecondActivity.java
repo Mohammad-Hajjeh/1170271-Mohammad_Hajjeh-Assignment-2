@@ -52,7 +52,7 @@ public class SecondActivity extends AppCompatActivity {
 
     private void populateSpinner1() {
         ArrayList<String> arrayListCountry = new ArrayList<>();
-        arrayListCountry.add("None");
+        arrayListCountry.add("Country");
         arrayListCountry.add("Jenin");
         arrayListCountry.add("Tubas");
         arrayListCountry.add("Tulkarm");

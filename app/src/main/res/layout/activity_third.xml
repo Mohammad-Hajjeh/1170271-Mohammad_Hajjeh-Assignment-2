@@ -1,9 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdActivity">
+    android:background="@drawable/bluebg"
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/custom"
+        android:text="Hobbies and Skills"
+
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="120dp"
+                android:ems="10"
+                android:gravity="center|start|top"
+                android:hint="\t\tEnter Your Hobbies And Skills"
+                android:inputType="textMultiLine" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/custom"
+        android:clickable="false"
+        android:text="Education"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="120dp"
+                android:ems="10"
+                android:gravity="center|start|top"
+                android:hint="\t\tEnter Your Educational certificates"
+                android:inputType="textMultiLine" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/custom"
+        android:clickable="false"
+        android:text="Experience"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="120dp"
+                android:ems="10"
+                android:gravity="center|start|top"
+                android:hint="\t\tEnter Your Experience"
+                android:inputType="textMultiLine" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/custom"
+        android:clickable="false"
+        android:text="Chose your option"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BackButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="45dp"
+            android:background="@drawable/custom"
+            android:onClick="back_onClick"
+            android:text="Back"
+            android:textColor="@color/teal_700"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/next2Button"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/custom"
+            android:onClick="continue2_onClick"
+            android:text="Continue"
+            android:textColor="@color/teal_700"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
