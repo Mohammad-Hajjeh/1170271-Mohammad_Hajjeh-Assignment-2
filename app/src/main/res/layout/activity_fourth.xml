@@ -16,7 +16,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/custom"
-        android:text="Summary"
+        android:text="Hobbies"
 
         android:textColor="@color/teal_700"
         android:textSize="18sp"
@@ -40,7 +40,7 @@
                 android:height="120dp"
                 android:ems="10"
                 android:gravity="center|start|top"
-                android:hint="\t\tTalk About You In Summary Paragraph"
+                android:hint="\t\tEnter Your Hobbies"
                 android:inputType="textMultiLine" />
         </ScrollView>
 
@@ -55,7 +55,7 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/custom"
         android:clickable="false"
-        android:text="Education"
+        android:text="Skills and Languages"
         android:textColor="@color/teal_700"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -78,7 +78,7 @@
                 android:height="120dp"
                 android:ems="10"
                 android:gravity="center|start|top"
-                android:hint="\t\tEnter Your Education"
+                android:hint="\t\tEnter Your Skills And Languages"
                 android:inputType="textMultiLine" />
         </ScrollView>
 
@@ -93,7 +93,7 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/custom"
         android:clickable="false"
-        android:text="Experience"
+        android:text="Certifications"
         android:textColor="@color/teal_700"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -116,7 +116,7 @@
                 android:height="120dp"
                 android:ems="10"
                 android:gravity="center|start|top"
-                android:hint="\t\tEnter Your Experience"
+                android:hint="\t\tEnter Your Certifications"
                 android:inputType="textMultiLine" />
         </ScrollView>
 
@@ -143,12 +143,12 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/BackButton"
+            android:id="@+id/Back2Button"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginStart="45dp"
             android:background="@drawable/custom"
-            android:onClick="back_onClick"
+            android:onClick="back2_onClick"
             android:text="Back"
             android:textColor="@color/teal_700"
             android:textSize="24sp"
@@ -156,13 +156,13 @@
             tools:ignore="OnClick" />
 
         <Button
-            android:id="@+id/next2Button"
+            android:id="@+id/next3Button"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
             android:background="@drawable/custom"
-            android:onClick="continue2_onClick"
-            android:text="Continue"
+            android:onClick="continue3_onClick"
+            android:text="Save"
             android:textColor="@color/teal_700"
             android:textSize="24sp"
             android:textStyle="bold"

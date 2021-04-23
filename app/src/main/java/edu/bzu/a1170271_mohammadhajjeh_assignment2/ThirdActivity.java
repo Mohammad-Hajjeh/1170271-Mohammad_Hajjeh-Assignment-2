@@ -18,5 +18,8 @@ public class ThirdActivity extends AppCompatActivity {
     }
 
     public void continue2_onClick(View view) {
+        Intent intent = new Intent(this,FourthActivity.class);
+        startActivity(intent);
     }
+
 }

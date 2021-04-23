@@ -104,6 +104,7 @@ public class SecondActivity extends AppCompatActivity {
         yearSpinner.setAdapter(arrayAdapterYear);
     }
     public void exit_onClick(View view) {
+
         onBackPressed();
     }
 
@@ -111,4 +112,5 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ThirdActivity.class);
         startActivity(intent);
     }
+
 }
