@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bluebg"
     android:orientation="vertical"
-    tools:context=".SecondActivity">
+    tools:context=".Activity.SecondActivity">
 
     <Button
         android:id="@+id/button"
@@ -33,7 +33,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editTextTextMultiLine"
+                android:id="@+id/editHobbies"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -71,7 +71,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editTextTextMultiLine3"
+                android:id="@+id/editSkills"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -109,7 +109,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editTextTextMultiLine2"
+                android:id="@+id/editCertifications"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

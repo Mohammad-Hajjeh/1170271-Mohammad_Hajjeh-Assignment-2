@@ -1,4 +1,4 @@
-package edu.bzu.a1170271_mohammadhajjeh_assignment2;
+package edu.bzu.a1170271_mohammadhajjeh_assignment2.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,15 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.Switch;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+
+import edu.bzu.a1170271_mohammadhajjeh_assignment2.R;
 
 public class SecondActivity extends AppCompatActivity {
     Spinner countrySpinner;
@@ -26,6 +27,7 @@ public class SecondActivity extends AppCompatActivity {
     RadioButton radioMale;
     RadioButton radioFemale;
     EditText emailAddressInputField;
+    EditText addressInputField;
     EditText firstNameInputField;
     EditText lastNameInputField;
     EditText phoneNumberInputField;
@@ -35,13 +37,14 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         emailAddressInputField = (EditText) findViewById(R.id.emailAddressInput);
+        addressInputField = (EditText) findViewById(R.id.emailAddressInput2);
         firstNameInputField = (EditText) findViewById(R.id.firstNameInput);
         lastNameInputField = (EditText) findViewById(R.id.lastNameInput);
         phoneNumberInputField = (EditText) findViewById(R.id.phoneNumberInput);
         monthSpinner = (Spinner) findViewById(R.id.spinnerMonth);
+        countrySpinner = (Spinner) findViewById(R.id.spinnerCountry);
         daySpinner = (Spinner) findViewById(R.id.spinnerDay);
         yearSpinner = (Spinner) findViewById(R.id.spinnerYear);
-        countrySpinner = (Spinner) findViewById(R.id.spinnerCountry);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         radioMale = (RadioButton) findViewById(R.id.radioButtonMale);
         radioFemale = (RadioButton) findViewById(R.id.radioButtonFemale);
@@ -110,6 +113,45 @@ public class SecondActivity extends AppCompatActivity {
 
     public void continue_onClick(View view) {
         Intent intent = new Intent(this,ThirdActivity.class);
+        int radioId = radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(radioId);
+        intent.putExtra("NAME",firstNameInputField.getText()+" "+lastNameInputField.getText());
+        intent.putExtra("EMAIL",emailAddressInputField.getText().toString());
+        intent.putExtra("PHONE",phoneNumberInputField.getText().toString());
+        intent.putExtra("MONTH",monthSpinner.getSelectedItem().toString());
+        intent.putExtra("DAY",daySpinner.getSelectedItem().toString());
+        intent.putExtra("YEAR",yearSpinner.getSelectedItem().toString());
+        intent.putExtra("COUNTRY",countrySpinner.getSelectedItem().toString());
+        intent.putExtra("GENDER",radioButton.getText());
+        intent.putExtra("ADDRESS",addressInputField.getText().toString().trim());
+        if(firstNameInputField.getText().toString().isEmpty())
+            Toast.makeText(this, "Fill First Name", Toast.LENGTH_SHORT).show();
+        else if(lastNameInputField.getText().toString().isEmpty())
+            Toast.makeText(this, "Fill Last Name", Toast.LENGTH_SHORT).show();
+        else if(emailAddressInputField.getText().toString().isEmpty())
+            Toast.makeText(this, "Fill Email Address", Toast.LENGTH_SHORT).show();
+        else if(phoneNumberInputField.getText().toString().isEmpty())
+            Toast.makeText(this, "Fill Number", Toast.LENGTH_SHORT).show();
+        else if(addressInputField.getText().toString().isEmpty())
+            Toast.makeText(this, "Fill Address", Toast.LENGTH_SHORT).show();
+        else if(monthSpinner.getSelectedItem().toString().equalsIgnoreCase("Month"))
+            Toast.makeText(this, "Fill Month Of Birthday", Toast.LENGTH_SHORT).show();
+        else if(daySpinner.getSelectedItem().toString().equalsIgnoreCase("Day"))
+            Toast.makeText(this, "Fill Day Of Birthday", Toast.LENGTH_SHORT).show();
+        else if(yearSpinner.getSelectedItem().toString().equalsIgnoreCase("Year"))
+            Toast.makeText(this, "Fill Year Of Birthday", Toast.LENGTH_SHORT).show();
+        else if(countrySpinner.getSelectedItem().toString().equalsIgnoreCase("Country"))
+            Toast.makeText(this, "Fill Country", Toast.LENGTH_SHORT).show();
+        if(!firstNameInputField.getText().toString().isEmpty()
+                && !lastNameInputField.getText().toString().isEmpty()
+                && !emailAddressInputField.getText().toString().isEmpty()
+                && !phoneNumberInputField.getText().toString().isEmpty()
+                && !addressInputField.getText().toString().isEmpty()
+                && !monthSpinner.getSelectedItem().toString().equalsIgnoreCase("Month")
+                && !daySpinner.getSelectedItem().toString().equalsIgnoreCase("Day")
+                && !yearSpinner.getSelectedItem().toString().equalsIgnoreCase("Year")
+                && !countrySpinner.getSelectedItem().toString().equalsIgnoreCase("Country")
+        )
         startActivity(intent);
     }
 

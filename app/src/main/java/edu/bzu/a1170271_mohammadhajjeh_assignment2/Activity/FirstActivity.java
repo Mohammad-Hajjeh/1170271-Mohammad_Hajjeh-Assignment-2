@@ -1,10 +1,12 @@
-package edu.bzu.a1170271_mohammadhajjeh_assignment2;
+package edu.bzu.a1170271_mohammadhajjeh_assignment2.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import edu.bzu.a1170271_mohammadhajjeh_assignment2.R;
 
 public class FirstActivity extends AppCompatActivity {
 
