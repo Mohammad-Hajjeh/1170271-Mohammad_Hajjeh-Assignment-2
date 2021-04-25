@@ -23,6 +23,7 @@ public class ThirdActivity extends AppCompatActivity {
     String year ;
     String country ;
     String address ;
+    String text3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,8 @@ public class ThirdActivity extends AppCompatActivity {
          year = intent.getStringExtra("YEAR");
          country = intent.getStringExtra("COUNTRY");
          address = intent.getStringExtra("ADDRESS");
+        text3=intent.getStringExtra("TEXT3");
+
     }
     public void back_onClick(View view) {
         finish();
@@ -47,6 +50,7 @@ public class ThirdActivity extends AppCompatActivity {
 
     public void continue2_onClick(View view) {
         Intent intent = new Intent(this,FourthActivity.class);
+        intent.putExtra("TEXT4",text3);
         intent.putExtra("NAME2",name);
         intent.putExtra("EMAIL2",email);
         intent.putExtra("PHONE2",phone);
@@ -68,8 +72,12 @@ public class ThirdActivity extends AppCompatActivity {
         if(!editSummary.getText().toString().isEmpty()
                 && !editEducation.getText().toString().isEmpty()
                 && !editExperience.getText().toString().isEmpty()
-        )
-        startActivity(intent);
+        ) {
+            Toast.makeText(this, text3, Toast.LENGTH_SHORT).show();
+
+
+            startActivity(intent);
+        }
     }
 
 }

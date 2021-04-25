@@ -31,6 +31,7 @@ public class SecondActivity extends AppCompatActivity {
     EditText firstNameInputField;
     EditText lastNameInputField;
     EditText phoneNumberInputField;
+    String text2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,9 @@ public class SecondActivity extends AppCompatActivity {
         radioMale.toggle();
         populateSpinner1();
         populateSpinner2();
+        Intent intent = getIntent();
+        text2=intent.getStringExtra("TEXT2");
+
     }
 
     private void populateSpinner1() {
@@ -115,6 +119,7 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ThirdActivity.class);
         int radioId = radioGroup.getCheckedRadioButtonId();
         radioButton = findViewById(radioId);
+        intent.putExtra("TEXT3",text2);
         intent.putExtra("NAME",firstNameInputField.getText()+" "+lastNameInputField.getText());
         intent.putExtra("EMAIL",emailAddressInputField.getText().toString());
         intent.putExtra("PHONE",phoneNumberInputField.getText().toString());
@@ -151,8 +156,11 @@ public class SecondActivity extends AppCompatActivity {
                 && !daySpinner.getSelectedItem().toString().equalsIgnoreCase("Day")
                 && !yearSpinner.getSelectedItem().toString().equalsIgnoreCase("Year")
                 && !countrySpinner.getSelectedItem().toString().equalsIgnoreCase("Country")
-        )
-        startActivity(intent);
+        ) {
+            Toast.makeText(this, text2, Toast.LENGTH_SHORT).show();
+
+            startActivity(intent);
+        }
     }
 
 }

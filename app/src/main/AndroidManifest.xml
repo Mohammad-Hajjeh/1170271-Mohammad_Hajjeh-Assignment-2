@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Activity.FourthActivity"></activity>
+        <activity android:name=".Activity.ShowActivity"></activity>
+        <activity android:name=".Activity.FourthActivity" />
         <activity android:name=".Activity.ThirdActivity" />
         <activity android:name=".Activity.SecondActivity" />
         <activity android:name=".Activity.FirstActivity">

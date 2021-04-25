@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import edu.bzu.a1170271_mohammadhajjeh_assignment2.Model.CV;
 import edu.bzu.a1170271_mohammadhajjeh_assignment2.R;
 
@@ -34,6 +37,9 @@ public class FourthActivity extends AppCompatActivity {
     String hobbies;
     String education;
     String experience;
+    String text4;
+    static List<CV> cvList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +60,8 @@ public class FourthActivity extends AppCompatActivity {
         summary = intent.getStringExtra("SUMMARY");
         education = intent.getStringExtra("EDUCATION");
         experience= intent.getStringExtra("EXPERIENCE");
+        text4= intent.getStringExtra("TEXT4");
+
 
     }
 
@@ -72,16 +80,24 @@ public class FourthActivity extends AppCompatActivity {
                 && !editCertifications.getText().toString().isEmpty()
         ) {
             CV  cv = new CV(name2,email2,phone2,gender2,month2,day2,year2,country2,address2,summary,skill,certification,hobbies,education,experience);
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-            SharedPreferences.Editor editor = prefs.edit();
+            cvList=new ArrayList<>();
+            cvList.add(cv);
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
             Gson gson = new Gson();
-            String cvString =gson.toJson(cv);
-            editor.putString("CV",cvString);
+            String cvString =gson.toJson(cvList);
+            editor.putString("CVDATA",cvString);
             editor.commit();
+            //Toast.makeText(this, "Data Saved", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Data Saved:\n" + cvString,
+              //      Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this,FirstActivity.class);
+            intent.putExtra("TEXT5",text4+"\n"+cvString);
+            intent.putExtra("FLAG4","4");
+            Toast.makeText(this, text4+"\n"+cvString, Toast.LENGTH_SHORT).show();
+            startActivity(intent);
 
-            Toast.makeText(this, "Data Saved", Toast.LENGTH_SHORT).show();
-            Toast.makeText(this, "Data Saved:\n" + cvString,
-                    Toast.LENGTH_SHORT).show();
+
         }
     }
     public void back2_onClick(View view) {

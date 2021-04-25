@@ -26,7 +26,7 @@
         style="@style/btn"
         android:background="@drawable/custom"
         android:onClick="creatCv"
-        android:text="Creat"
+        android:text="Create Cv"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,6 +34,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.72" />
+
+    <Button
+        android:id="@+id/btnShow"
+        style="@style/btn"
+        android:background="@drawable/custom"
+        android:onClick="showCvs"
+        android:text="Get Cvs"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
 
     <Button
         android:id="@+id/btnExit"
@@ -47,6 +61,6 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCreat"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.538" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
