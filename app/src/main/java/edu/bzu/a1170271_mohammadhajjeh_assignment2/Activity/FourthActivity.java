@@ -93,8 +93,7 @@ public class FourthActivity extends AppCompatActivity {
               //      Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this,FirstActivity.class);
             intent.putExtra("TEXT5",text4+"\n"+cvString);
-            intent.putExtra("FLAG4","4");
-            Toast.makeText(this, text4+"\n"+cvString, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, cvString, Toast.LENGTH_SHORT).show();
             startActivity(intent);
 
 

@@ -38,17 +38,17 @@ public class ShowActivity extends AppCompatActivity {
 
     public void exitShow(View view) {
         Intent intent = new Intent(this,FirstActivity.class);
-        if(!textView.getText().toString().equalsIgnoreCase("You Don't Have Cvs Before")|| !textView.getText().toString().equalsIgnoreCase("")) {
-            intent.putExtra("TEXT", textView.getText().toString());
-            intent.putExtra("FLAGS","S");
+       // if(!textView.getText().toString().equalsIgnoreCase("You Don't Have Cvs Before")|| !textView.getText().toString().equalsIgnoreCase("")) {
+            intent.putExtra("TEXT5", textView.getText().toString());
+          //  intent.putExtra("FLAGS","S");
 
-        }
-        else{
-           intent.putExtra("TEXT","");
-        intent.putExtra("FLAGS","S");
+        //}
+       // else{
+           //intent.putExtra("TEXT","");
+       // intent.putExtra("FLAGS","S");
 
-    }
-        Toast.makeText(this, textView.getText().toString(), Toast.LENGTH_SHORT).show();
+   // }
+        //Toast.makeText(this, textView.getText().toString(), Toast.LENGTH_SHORT).show();
         startActivity(intent);
 
 
