@@ -73,9 +73,6 @@ public class ThirdActivity extends AppCompatActivity {
                 && !editEducation.getText().toString().isEmpty()
                 && !editExperience.getText().toString().isEmpty()
         ) {
-            //Toast.makeText(this, text3, Toast.LENGTH_SHORT).show();
-
-
             startActivity(intent);
         }
     }

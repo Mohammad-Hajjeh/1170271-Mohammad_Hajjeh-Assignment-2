@@ -9,28 +9,34 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import edu.bzu.a1170271_mohammadhajjeh_assignment2.R;
 
 public class FirstActivity extends AppCompatActivity {
     String text;
-    String text2;
+    String textv;
     boolean flag;
+    String id;
     private SharedPreferences prefs;
     private SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-       /*prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = prefs.edit();
-        flag=prefs.getBoolean("FLAG",false);
-        if(flag)
-        {
-            text2=prefs.getString("TXT","");
-        }*/
+       prefs = PreferenceManager.getDefaultSharedPreferences(this);
         Intent intent = getIntent();
        text=intent.getStringExtra("TEXT5");
-        //Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+       //textv=intent.getStringExtra("TEXTV");
+        textv=prefs.getString("SAVEDATA","");
+        flag=prefs.getBoolean("FLAG",false);
+        id=prefs.getString("ID","1");
+        if(id.equalsIgnoreCase("1"))
+        Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(this, "2", Toast.LENGTH_SHORT).show();
+
+
 
     }
 
@@ -42,21 +48,31 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     public void exitCv(View view) {
-       /* Intent intent = getIntent();
-        text=intent.getStringExtra("TEXT5");
-            editor.putString("TXT", text);
-            editor.putBoolean("FLAG", true);
-            editor.commit();*/
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        String saveData = text;
+        if(saveData.equalsIgnoreCase("")) {
+            editor.putString("SAVEDATA", "");
+            editor.putString("ID","1");
+            editor.putBoolean("FLAG",true);
+
+        }
+        else {
+            editor.putString("SAVEDATA", saveData);
+            editor.putString("ID","1");
+            editor.putBoolean("FLAG",true);
+        }
+        editor.commit();
         finishAffinity();
     }
 
     public void showCvs(View view) {
         Intent intent = new Intent(this,ShowActivity.class);
-        if(text!=null)
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if(text!=null && id.equalsIgnoreCase("2"))
         intent.putExtra("TEXT6",text);
-        else
-            intent.putExtra("TEXT6","");
-
+        if(textv!=null && id.equalsIgnoreCase("1"))
+            intent.putExtra("TEXT6",textv);
         startActivity(intent);
     }
 }

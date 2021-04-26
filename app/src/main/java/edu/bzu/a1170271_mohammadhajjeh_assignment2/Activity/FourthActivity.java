@@ -87,12 +87,11 @@ public class FourthActivity extends AppCompatActivity {
             Gson gson = new Gson();
             String cvString =gson.toJson(cvList);
             editor.putString("CVDATA",cvString);
+            editor.putString("ID","2");
             editor.commit();
-            //Toast.makeText(this, "Data Saved", Toast.LENGTH_SHORT).show();
-            //Toast.makeText(this, "Data Saved:\n" + cvString,
-              //      Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this,FirstActivity.class);
-            intent.putExtra("TEXT5",text4+"\n"+cvString);
+            intent.putExtra("TEXT5","\n"+text4+"\n"+cvString+"\n======================================\n");
+            Toast.makeText(this, "DATA SAVED", Toast.LENGTH_SHORT).show();
             Toast.makeText(this, cvString, Toast.LENGTH_SHORT).show();
             startActivity(intent);
 

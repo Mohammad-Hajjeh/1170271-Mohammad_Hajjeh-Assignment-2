@@ -131,7 +131,7 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/custom"
         android:clickable="false"
-        android:text="Chose your option"
+        android:text="Choose your option"
         android:textColor="@color/teal_700"
         android:textSize="18sp"
         android:textStyle="bold" />

@@ -157,8 +157,6 @@ public class SecondActivity extends AppCompatActivity {
                 && !yearSpinner.getSelectedItem().toString().equalsIgnoreCase("Year")
                 && !countrySpinner.getSelectedItem().toString().equalsIgnoreCase("Country")
         ) {
-           // Toast.makeText(this, text2, Toast.LENGTH_SHORT).show();
-
             startActivity(intent);
         }
     }
