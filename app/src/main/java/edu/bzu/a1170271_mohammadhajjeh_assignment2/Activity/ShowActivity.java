@@ -36,10 +36,10 @@ public class ShowActivity extends AppCompatActivity {
 
     public void exitShow(View view) {
         Intent intent = new Intent(this,FirstActivity.class);
-            intent.putExtra("TEXT5", textView.getText().toString());
-        if(textView.getText().equals("")) intent.putExtra("TEXTV","E");
+        if(textView.getText().toString()==null)
+        intent.putExtra("TEXT5", "");
         else
-        intent.putExtra("TEXTV",textView.getText().toString());
+            intent.putExtra("TEXT5", textView.getText().toString());
         startActivity(intent);
 
     }

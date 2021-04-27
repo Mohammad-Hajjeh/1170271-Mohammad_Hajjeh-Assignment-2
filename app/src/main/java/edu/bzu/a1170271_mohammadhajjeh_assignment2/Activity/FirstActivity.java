@@ -18,32 +18,22 @@ public class FirstActivity extends AppCompatActivity {
     String textv;
     boolean flag;
     String id;
-    private SharedPreferences prefs;
-    private SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-       prefs = PreferenceManager.getDefaultSharedPreferences(this);
+       SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         Intent intent = getIntent();
        text=intent.getStringExtra("TEXT5");
-       //textv=intent.getStringExtra("TEXTV");
         textv=prefs.getString("SAVEDATA","");
         flag=prefs.getBoolean("FLAG",false);
         id=prefs.getString("ID","1");
-        if(id.equalsIgnoreCase("1"))
-        Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
-        else
-            Toast.makeText(this, "2", Toast.LENGTH_SHORT).show();
-
-
 
     }
 
     public void creatCv(View view) {
         Intent intent = new Intent(this,SecondActivity.class);
         intent.putExtra("TEXT2",text);
-        //Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 
@@ -68,11 +58,10 @@ public class FirstActivity extends AppCompatActivity {
 
     public void showCvs(View view) {
         Intent intent = new Intent(this,ShowActivity.class);
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         if(text!=null && id.equalsIgnoreCase("2"))
-        intent.putExtra("TEXT6",text);
+        intent.putExtra("TEXT6",text.replaceAll("null",""));
         if(textv!=null && id.equalsIgnoreCase("1"))
-            intent.putExtra("TEXT6",textv);
+            intent.putExtra("TEXT6",textv.replaceAll("null",""));
         startActivity(intent);
     }
 }

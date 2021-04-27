@@ -62,6 +62,14 @@
       android:autofillHints="" />
 
   <EditText
+      android:id="@+id/phoneNumberInput"
+      style="@style/EditStyle"
+      android:autofillHints=""
+      android:drawableStart="@drawable/ic_phone"
+      android:hint="@string/number"
+      android:inputType="textPersonName|phone" />
+
+  <EditText
       android:id="@+id/emailAddressInput2"
       style="@style/EditStyle"
       android:layout_width="match_parent"
@@ -70,14 +78,6 @@
       android:drawableStart="@drawable/adress"
       android:hint=" Address"
       android:inputType="textEmailAddress" />
-
-  <EditText
-      android:id="@+id/phoneNumberInput"
-      style="@style/EditStyle"
-      android:drawableStart="@drawable/ic_phone"
-      android:hint="@string/number"
-      android:inputType="textPersonName|phone"
-      android:autofillHints="" />
 
   <LinearLayout
       android:layout_width="match_parent"
